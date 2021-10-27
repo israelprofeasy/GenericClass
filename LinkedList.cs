@@ -21,10 +21,10 @@ namespace GenericClass
         // creating an add method that adds to the tail of a LinkedList and returns its size
         public int Add(T value)
         {
-            Node<T> data = new Node<T>(value);
+            Node<T> newNode = new Node<T>(value);
             if (this.count == 0)
             {
-                this.head = data;
+                this.head = newNode;
             }
             else
             {
@@ -33,7 +33,7 @@ namespace GenericClass
                 {
                     if (presentNode.Next == null)
                     {
-                        presentNode.Next = data;
+                        presentNode.Next = newNode;
                     }
                     else
                     {

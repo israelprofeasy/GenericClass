@@ -64,5 +64,16 @@ namespace GenericClass
         {
             return this.head.Data;
         }
+
+        public void Print()
+        {
+            Node<T> temp = head;
+            while (head != null)
+            {
+                Console.WriteLine($"{temp.Data}->");
+                temp = temp.Next;
+            }
+
+        }
     }
 }
